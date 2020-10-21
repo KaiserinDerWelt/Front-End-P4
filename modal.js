@@ -34,69 +34,88 @@ function validate(){
   var firstname = document.reserve.first.value
   var lastname = document.reserve.last.value;
   var email = document.reserve.email.value;
+  var bday = document.reserve.birthdate.value;
   var quantity = document.reserve.quantity.value;
   var location = document.reserve.location.value;
+  var condition = document.reserve.term.value;
+  
 
-  var firstError = lastError = mailError = quantityError = locationError = true;
+  var firstError = lastError = mailError = bdayError = quantityError = locationError = conditionError = true;
 
 // Validating firstname
 if(firstname == "") {
-  printError("firstError", "Please enter your name");
+  printError("firstError", "Please enter your name.");
 } else {
   var regex = /^[a-zA-Z\s]+$/;                
-  if(regex.test(name) === false) {
-      printError("firstError", "Please enter a valid name");
+  if(regex.test(firstname) === false) {
+      printError("firstError", "Please enter a valid name.");
   } else {
       printError("firstError", "");
-      nameErr = false;
+      firstError = false;
   }
 }
 
 // Validating secondname
 if(lastname == "") {
-  printError("lastError", "Please enter your name");
+  printError("lastError", "Please enter your last name.");
 } else {
   var regex = /^[a-zA-Z\s]+$/;                
-  if(regex.test(name) === false) {
-      printError("lastError", "Please enter a valid name");
+  if(regex.test(lastname) === false) {
+      printError("lastError", "Please at least 2 characters for lastname field.");
   } else {
       printError("lastError", "");
-      nameErr = false;
+      lastError = false;
   }
 }
 
-// Validate email 
+// Validating email 
 if(email == "") {
-  printError("mailError", "Please enter your email address");
+  printError("mailError", "Please enter your email address.");
 } else {
   // Regular expression for basic email validation
   var regex = /^\S+@\S+\.\S+$/;
   if(regex.test(email) === false) {
-      printError("mailError", "Please enter a valid email address");
+      printError("mailError", "Please enter a valid email address.");
   } else{
       printError("mailError", "");
       emailErr = false;
   }
 }
 
-//Validate quantity
+//Validating bday
+if(bday == "") {
+  printError("bdayError", "Please select your birthdate.");
+} else {
+  printError("bdayError", "");
+  bdayError = false;
+}
+
+//Validating quantity
 if(quantity == "") {
-  printError("quantityError", "Please select your gender");
+  printError("quantityError", "Please select number of attendants.");
 } else {
   printError("quantityError", "");
   quantityError = false;
 }
 
- // Validate gender
+ // Validating location
  if(location == "") {
-  printError("locationError", "Please select your location");
+  printError("locationError", "Please select your location.");
 } else {
   printError("locationError", "");
   locationError = false;
 }
 
+// Validating terms and conditions
+if(condition == "") {
+  printError("conditionError", "Please accept our terms.");
+} else {
+  printError("conditionError", "");
+  conditionError = false;
+}
+ 
 //Do not send the form if there are errors
-if((firstError || lastError || mailError || quantityError || locationError) == true) {
+if((firstError || lastError || mailError || bdayError || quantityError || locationError || conditionError) == true) {
   return false;
 } else{
 var successMessage= "Thanks for your submission"

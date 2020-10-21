@@ -527,3 +527,9 @@ footer {
   }
 }
 
+.error{
+  color: red;
+  font-size: 12px;
+  text-align: left;
+  word-spacing: 0,5px;
+}
