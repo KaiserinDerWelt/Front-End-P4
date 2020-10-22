@@ -19,7 +19,6 @@ function printError(elemId, hintMsg) {
         }
     }
   
-  
     var firstError = lastError = mailError = bdayError = quantityError = locationError = hoErr = true;
   
     // Validating firstname
