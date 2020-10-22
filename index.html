@@ -148,14 +148,13 @@
               </div>
               <div
                 class="formData">
-                <input class="checkbox-input" type="checkbox" id="checkbox1" name="term"/>
+                <input class="checkbox-input" type="checkbox" id="checkbox1" name="accept[]"/>
                 <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   I have read and I agree to GameOn's terms and conditions.
                 </label>
-                <br>
-                <div class="error" id="conditionError"></div>
-                <input class="checkbox-input" type="checkbox" id="checkbox2" />
+                <div class="error" id="hoErr"></div>
+                <input class="checkbox-input" type="checkbox" id="checkbox2" name="accept[]"/>
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
                   Please sign me up to be notified about future events.
@@ -174,5 +173,6 @@
       </p>
     </footer>
     <script src="modal.js"></script>
+    <script src="validator.js"></script>
   </body>
 </html>

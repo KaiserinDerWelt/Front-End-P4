@@ -11,10 +11,16 @@ function printError(elemId, hintMsg) {
     var bday = document.reserve.birthdate.value;
     var quantity = document.reserve.quantity.value;
     var location = document.reserve.location.value;
-    var condition = document.reserve.term.value;
+    var accept = [];
+    var checkboxes = document.getElementsByName("accept[]");
+    for(var i=0; i < checkboxes.length; i++) {
+        if(checkboxes[i].checked) {
+            accept.push(checkboxes[i].value);
+        }
+    }
   
   
-    var firstError = lastError = mailError = bdayError = quantityError = locationError = conditionError = true;
+    var firstError = lastError = mailError = bdayError = quantityError = locationError = hoErr = true;
   
     // Validating firstname
     if (firstname == "") {
@@ -81,15 +87,16 @@ function printError(elemId, hintMsg) {
     }
   
     // Validating terms and conditions
-    if (condition == "") {
-        printError("conditionError", "Please accept our terms.");
+   // Validating Checkbox
+   if(accept == "") {
+    printError("hoErr", "Please accept terms");
     } else {
-        printError("conditionError", "");
-        conditionError = false;
+    printError("hoErr", "");
+    hoErr = false;
     }
   
     //Do not send the form if there are errors
-    if ((firstError || lastError || mailError || bdayError || quantityError || locationError || conditionError) == true) {
+    if ((firstError || lastError || mailError || bdayError || quantityError || locationError || hoErr) == true) {
         return false;
     } else {
         var successMessage = "Thanks for your submission";
