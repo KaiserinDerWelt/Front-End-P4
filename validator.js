@@ -5,7 +5,7 @@ function printError(elemId, hintMsg) {
 
 //Form validation function
 function validate() {
-    var firstname = document.reserve.first.value
+    var firstname = document.reserve.first.value;
     var lastname = document.reserve.last.value;
     var email = document.reserve.email.value;
     var bday = document.reserve.birthdate.value;
@@ -97,7 +97,8 @@ function validate() {
     //Do not send the form if there are errors
     if ((firstError || lastError || mailError || bdayError || quantityError || locationError || hoErr) == true) {
         return false;
-    } else {
+    }
+     else {
         var successMessage = "Thanks for your submission";
         alert(successMessage);
     }
