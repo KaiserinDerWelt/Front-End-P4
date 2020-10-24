@@ -28,6 +28,8 @@ function validate() {
         var regex = /^[a-zA-Z\s]+$/;
         if (regex.test(firstname) === false) {
             printError("firstError", "Please enter a valid name.");
+        } else if (firstname.length < 2) {
+            printError("firstError", "Please at least 2 characters for firstname field.");
         } else {
             printError("firstError", "");
             firstError = false;
@@ -40,6 +42,8 @@ function validate() {
     } else {
         var regex = /^[a-zA-Z\s]+$/;
         if (regex.test(lastname) === false) {
+            printError("lastError", "Please enter a valid name.");
+        } else if (lastname.length < 2) {
             printError("lastError", "Please at least 2 characters for lastname field.");
         } else {
             printError("lastError", "");
@@ -57,7 +61,7 @@ function validate() {
             printError("mailError", "Please enter a valid email address.");
         } else {
             printError("mailError", "");
-            emailErr = false;
+            mailError = false;
         }
     }
 
@@ -95,7 +99,7 @@ function validate() {
     }
 
     //Do not send the form if there are errors
-    if ((firstError || lastError || mailError || bdayError || quantityError || locationError || hoErr) == true) {
+    if (firstError || lastError || mailError || bdayError || quantityError || locationError || hoErr) {
         return false;
     }
      else {
