@@ -3,6 +3,10 @@ function printError(elemId, hintMsg) {
     document.getElementById(elemId).innerHTML = hintMsg;
 }
 
+function showSuccess() {
+    document.getElementById('Successy').style.display = "block";
+ }
+
 //Form validation function
 function validate() {
     var firstname = document.reserve.first.value;
@@ -103,7 +107,9 @@ function validate() {
         return false;
     }
      else {
-        var successMessage = "Thanks for your submission";
-        alert(successMessage);
+         //myFunction
+         showSuccess("Successy");
+         return false;
     }
 };
+
