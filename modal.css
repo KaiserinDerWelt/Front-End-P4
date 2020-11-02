@@ -19,6 +19,7 @@ body {
   font-size: 18px;
   max-width: 1300px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 p {
@@ -165,7 +166,7 @@ main {
   top: 0;
   height: 100%;
   width: 100%;
-  overflow: auto;
+  overflow: scroll;
   background-color: rgba(26, 39, 156, 0.4);
 }
 
@@ -177,7 +178,6 @@ main {
   top: 0;
   height: 100%;
   width: 100%;
-  overflow: auto;
   background-color: rgba(26, 39, 156, 0.4);
 }
 .content {
@@ -195,9 +195,11 @@ main {
 }
 
 .content-success {
-  margin: 5% auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  margin-left: auto;
   width: 100%;
-  height: 700px;
+  height: 550px;
   max-width: 500px;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
@@ -207,7 +209,6 @@ main {
   position: relative;
   color: #fff;
   padding-top: 10px;
-  
 }
 
 .modal-body {
