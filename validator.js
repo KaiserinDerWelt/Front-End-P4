@@ -7,6 +7,11 @@ function showSuccess() {
     document.getElementById('Successy').style.display = "block";
  }
 
+ function reset() {
+    document.getElementByName("reserve").reset();
+  }
+
+
 //Form validation function
 function validate() {
     var firstname = document.reserve.first.value;

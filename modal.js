@@ -27,3 +27,7 @@ function closeModal(){
   modalbg.style.display ="none";
 }
 
+function closeSuccess(){
+  modalbg.style.display ="none";
+}
+
