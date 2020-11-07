@@ -476,6 +476,7 @@ input[data-error]::after {
 }
 
 .hero-text-success {
+  margin-top: 150px;
   width: 100%;
   font-weight: normal;
   margin-top: 57px;
@@ -523,6 +524,7 @@ footer {
   .hero-section {
     display: block;
     box-shadow: unset;
+    min-height: 0px;
   }
   .hero-content {
     background: #fff;
@@ -554,7 +556,7 @@ footer {
     padding: 12px 35px;
   }
   .copyrights {
-    margin-top: 50px;
+    margin-top: 0px;
     text-align: center;
   }
   .content-success {
