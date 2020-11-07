@@ -515,7 +515,11 @@ footer {
   margin: 0 20px;
 }
 @media screen and (max-width: 800px) {
- 
+  
+  img {
+    padding-right: 1rem;
+    width: 150px;
+  }
   .hero-section {
     display: block;
     box-shadow: unset;
