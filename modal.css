@@ -464,7 +464,7 @@ input[data-error]::after {
   z-index: 1;
 }
 .hero-headline {
-  font-size: 6rem;
+  font-size: 6.3rem;
   font-weight: normal;
   white-space: nowrap;
 }
@@ -538,13 +538,13 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     white-space: normal;
   }
   .hero-text {
     width: unset;
-    font-size: 13px;
-    margin-top: 26px;
+    font-size: 11.9px;
+    margin-top: 25px;
   }
   .hero-img img {
     border-radius: 10px;
