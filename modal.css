@@ -182,7 +182,7 @@ main {
   background-color: rgba(26, 39, 156, 0.4);
 }
 .content {
-  margin: 5% auto;
+  margin: 11.5% auto;
   width: 100%;
   max-width: 500px;
   animation-name: modalopen;
@@ -351,6 +351,17 @@ input[data-error]::after {
 }
 .btn-submit,
 .btn-signup {
+  background: #fe142f;
+  display: block;
+  margin: 0 auto;
+  border-radius: 7px;
+  font-size: 1rem;
+  padding: 12px 82px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+.btn-submit-success {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -564,7 +575,7 @@ footer {
     margin-bottom: 5%;
     margin-left: auto;
     width: 100%;
-    height: 763px;
+    height: 815px;
     max-width: 515px;
     background: #232323;
     border-radius: 10px;
@@ -591,3 +602,35 @@ footer {
   text-align: left;
   word-spacing: 0,5px;
 }
+
+@media (min-width:1024px) {
+  /* big landscape tablets, laptops, and desktops */ 
+  .content-success {
+    margin-right: auto;
+    margin-bottom: 5%;
+    margin-left: auto;
+    width: 100%;
+    height: 840px;
+    max-width: 515px;
+    background: #232323;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    padding-top: 10px;
+  }
+  
+ }
+
+ @media (max-width:768px) {
+  .hero-headline {
+    font-size: 98px;
+    white-space: normal;
+  }
+  .hero-text {
+    width: unset;
+    font-size: 26px;
+    margin-top: 25px;
+  }
+ }
+ 
