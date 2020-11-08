@@ -32,12 +32,15 @@ function validate() {
 
     // Validating firstname
     if (firstname == "") {
+        document.getElementById('first').style.borderColor = "red";
         printError("firstError", "Please enter your name.");
     } else {
         var regex = /^[a-zA-Z\s]+$/;
         if (regex.test(firstname) === false) {
+            document.getElementById('first').style.borderColor = "red";
             printError("firstError", "Please enter a valid name.");
         } else if (firstname.length < 2) {
+            document.getElementById('first').style.borderColor = "red";
             printError("firstError", "Please at least 2 characters for firstname field.");
         } else {
             printError("firstError", "");
@@ -47,12 +50,15 @@ function validate() {
 
     // Validating secondname
     if (lastname == "") {
+        document.getElementById('last').style.borderColor = "red";
         printError("lastError", "Please enter your last name.");
     } else {
         var regex = /^[a-zA-Z\s]+$/;
         if (regex.test(lastname) === false) {
+            document.getElementById('last').style.borderColor = "red";
             printError("lastError", "Please enter a valid name.");
         } else if (lastname.length < 2) {
+            document.getElementById('last').style.borderColor = "red";
             printError("lastError", "Please at least 2 characters for lastname field.");
         } else {
             printError("lastError", "");
@@ -62,11 +68,13 @@ function validate() {
 
     // Validating email 
     if (email == "") {
+        document.getElementById('email').style.borderColor = "red";
         printError("mailError", "Please enter your email address.");
     } else {
         // Regular expression for basic email validation
         var regex = /^\S+@\S+\.\S+$/;
         if (regex.test(email) === false) {
+            document.getElementById('email').style.borderColor = "red";
             printError("mailError", "Please enter a valid email address.");
         } else {
             printError("mailError", "");
@@ -76,6 +84,7 @@ function validate() {
 
     //Validating bday
     if (bday == "") {
+        document.getElementById('birthdate').style.borderColor = "red";
         printError("bdayError", "Please select your birthdate.");
     } else {
         printError("bdayError", "");
@@ -84,6 +93,7 @@ function validate() {
 
     //Validating quantity
     if (quantity == "") {
+        document.getElementById('quantity').style.borderColor = "red";
         printError("quantityError", "Please select number of attendants.");
     } else {
         printError("quantityError", "");
