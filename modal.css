@@ -641,10 +641,13 @@ footer {
     white-space: nowrap;
 }
 .hero-text {
-  width: unset;
-  font-size: 26px !important;
+  width: 146%;
   margin-top: 25px !important;
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
  }
  
