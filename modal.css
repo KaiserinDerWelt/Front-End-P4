@@ -624,3 +624,38 @@ footer {
   }
   
  }
+ @media (min-width:540px) {
+  .hero-headline {
+    font-size: 4rem !important;
+    white-space: normal;
+}
+.hero-text {
+  width: unset;
+  font-size: 18px !important;
+  margin-top: 25px !important;
+}
+ }
+ @media (min-width:768px) {
+  .hero-headline {
+    white-space: normal;
+}
+.hero-text {
+  width: unset;
+  font-size: 26px !important;
+  margin-top: 25px !important;
+}
+ }
+ 
+ @media (max-width:280px) {
+   .hero-headline {
+    font-size: 30px;
+    white-space: normal;
+}
+.hero-text {
+  width: unset;
+  font-size: 9px;
+  margin-top: 25px;
+}
+ }
+
+ 
