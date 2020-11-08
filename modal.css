@@ -493,6 +493,9 @@ input[data-error]::after {
   margin-top: 57px;
   padding: 0;
   text-align: center;
+  font-size: xx-large;
+  margin-top: 170px;
+  margin-bottom: 180px
 }
 .btn-signup {
   outline: none;
@@ -621,16 +624,3 @@ footer {
   }
   
  }
-
- @media (max-width:768px) {
-  .hero-headline {
-    font-size: 98px;
-    white-space: normal;
-  }
-  .hero-text {
-    width: unset;
-    font-size: 26px;
-    margin-top: 25px;
-  }
- }
- 
