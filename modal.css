@@ -627,7 +627,7 @@ footer {
  }
  @media (min-width:540px) {
   .hero-headline {
-    font-size: 4rem !important;
+    font-size: 4.39rem !important;
     white-space: normal;
 }
 .hero-text {
@@ -644,6 +644,7 @@ footer {
   width: unset;
   font-size: 26px !important;
   margin-top: 25px !important;
+  white-space: nowrap;
 }
  }
  
